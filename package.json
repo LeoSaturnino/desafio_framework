@@ -4,12 +4,15 @@
   "description": "Desafio do processo de seleção da Framework",
   "main": "server.ts",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand"
   },
   "author": "Leo Saturnino",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^17.0.4",
     "jest": "^27.4.5",
     "ts-jest": "^27.1.2",
     "ts-node-dev": "^1.1.8",
