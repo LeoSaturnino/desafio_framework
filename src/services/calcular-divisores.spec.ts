@@ -16,4 +16,20 @@ describe("Calcular Divisores Teste", () => {
 
     expect(resposta).toEqual(new Error("Valor informado não é um Número"));
   });
+
+  test("Testa se o retorno da função de calcular divisores é um array de números", () => {
+    const valor = 10;
+    const calc = new CalcularDivisores();
+    const resposta = calc.executar(valor);
+
+    expect(resposta).toBeInstanceOf(Array);
+  });
+
+  test("Testa se o retorno da função de calcular divisores está correto", () => {
+    const valor = 10;
+    const calc = new CalcularDivisores();
+    const resposta = calc.executar(valor);
+
+    expect(resposta).toEqual([1, 2, 5, 10]);
+  });
 });
