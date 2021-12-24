@@ -4,6 +4,14 @@ export class CalcularDivisores {
 
     if (isNaN(num)) return new Error("Valor informado não é um Número");
 
-    return;
+    const divisores = [1];
+
+    for (let i = 2; i <= num; i++) {
+      if (num % i === 0) {
+        divisores.push(i);
+      }
+    }
+
+    return divisores;
   }
 }
