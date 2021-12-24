@@ -1,0 +1,18 @@
+{
+  "name": "desafio_framework",
+  "version": "1.0.0",
+  "description": "Desafio do processo de seleção da Framework",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand"
+  },
+  "author": "Leo Saturnino",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.4.5",
+    "ts-jest": "^27.1.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  }
+}
