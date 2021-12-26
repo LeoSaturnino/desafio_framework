@@ -1,4 +1,5 @@
 import { CalcularDivisores } from "./services/calcular-divisores";
+import { VerificarPrimo } from "./services/verificar-primo";
 
 const readline = require("readline");
 
@@ -24,6 +25,23 @@ const executar = async () => {
     console.log(divisores);
 
     console.log();
+
+    const verif = new VerificarPrimo();
+    const divisoresPrimo: number[] = [];
+
+    if (Array.isArray(divisores)) {
+      for (let i = 0; i < divisores.length; i++) {
+        if (verif.executar(divisores[i])) {
+          divisoresPrimo.push(divisores[i]);
+        }
+      }
+
+      console.log("Número Divisores Primo: ");
+
+      console.log(divisoresPrimo);
+
+      console.log();
+    }
   } catch (err) {
     console.error(err);
   }
