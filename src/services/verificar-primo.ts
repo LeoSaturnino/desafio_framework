@@ -1,13 +1,15 @@
 export class VerificarPrimo {
   executar(num: any): any {
-    if (!num) return new Error("Valor não Informado");
+    if (!num) return new Error("Valor não informado");
 
     if (isNaN(num)) return new Error("Valor informado não é um Número");
 
-    if (num % 2 === 0) {
-      return true;
+    for (let i = 2; i <= num / 2; i++) {
+      if (num % i === 0) {
+        return false;
+      }
     }
 
-    return false;
+    return true;
   }
 }
