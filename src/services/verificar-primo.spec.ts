@@ -16,4 +16,20 @@ describe("Verificar Primo Teste", () => {
 
     expect(resposta).toEqual(new Error("Valor informado não é um Número"));
   });
+
+  test("Testa se o valor retornado é falso para número não primo", () => {
+    const valor = 4;
+    const calc = new VerificarPrimo();
+    const resposta = calc.executar(valor);
+
+    expect(resposta).toBe(false);
+  });
+
+  test("Testa se o valor retornado é verdadeiro para número primo", () => {
+    const valor = 3;
+    const calc = new VerificarPrimo();
+    const resposta = calc.executar(valor);
+
+    expect(resposta).toBe(true);
+  });
 });
