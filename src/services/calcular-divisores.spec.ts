@@ -36,4 +36,22 @@ describe("Calcular Divisores Teste", () => {
 
     expect(resposta).toEqual([1, 2, 5, 10]);
   });
+  
+  test("Testa se o retorno da função de calcular divisores passando o número 0", () => {
+    const valor = 0;
+    const calc = new CalcularDivisores();
+    try {
+      calc.executar(valor);
+    } catch (err) {
+      expect(err).toEqual(new Error("O zero(0) é divisível por todos os números, menos por ele mesmo"));
+    }
+  });
+  
+  test("Testa se o retorno da função de calcular divisores passando um número negativo", () => {
+    const valor = -5;
+    const calc = new CalcularDivisores();
+    const resposta = calc.executar(valor);
+
+    expect(resposta).toEqual([1, 5]);
+  });
 });
