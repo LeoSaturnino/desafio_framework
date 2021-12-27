@@ -3,9 +3,9 @@
 Projeto de uma API que recebe um número e retorna um array dos seus divisores e um array dos seus divisores primos
 
 ## Tecnologias
-NodeJS com express
-Typescript
-TDD com Jest
+NodeJS com express </br>
+Typescript</br>
+TDD com Jest</br>
 
 
 ## Execução
@@ -20,7 +20,7 @@ TDD com Jest
 
 - resposta: 
 {
-satausCode: 200,
+statusCode: 200,
 body:{
   numEntrada: 10,
   divisores: [1,2,5,10]
