@@ -12,7 +12,7 @@ export class CalcularDivisores {
       }
     }
 
-    divisores.push(num);
+    divisores.push(Number(num));
 
     return divisores;
   }

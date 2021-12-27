@@ -16,11 +16,18 @@ const perguntar = (pergunta) =>
 const executar = async () => {
   try {
     const valor = await perguntar("Informe um número: ");
+    console.log();
+    
+    console.log("Números de Entrada: ");
+
+    console.log(valor);
+
+    console.log();
 
     const calc = new CalcularDivisores();
     const divisores = calc.executar(valor);
 
-    console.log("Número Divisores: ");
+    console.log("Números Divisores: ");
 
     console.log(divisores);
 
@@ -36,7 +43,7 @@ const executar = async () => {
         }
       }
 
-      console.log("Número Divisores Primo: ");
+      console.log("Números Divisores Primo: ");
 
       console.log(divisoresPrimo);
 
