@@ -1,8 +1,8 @@
 export class CalcularDivisores {
-  executar(num: any): Error | number[] {
-    if (!num) return new Error("Valor não informado");
+  executar(num: any): number[] {
+    if (!num) throw new Error("Valor não informado");
 
-    if (isNaN(num)) return new Error("Valor informado não é um Número");
+    if (isNaN(num)) throw new Error("Valor informado não é um Número");
 
     const divisores = [1];
 
