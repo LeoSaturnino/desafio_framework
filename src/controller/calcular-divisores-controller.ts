@@ -12,7 +12,7 @@ export interface RespostaDvivisores {
 export class CalcularDivisoresController {
   executar(req: HttpRequest): HttpResponse {
     try {
-      const valor = req.params.num;
+      var valor = req.params.num;
 
       const calc = new CalcularDivisores();
       const respCalcDivisores = calc.executar(valor);
@@ -28,6 +28,8 @@ export class CalcularDivisoresController {
           divisoresPrimo.push(divisores[i]);
         }
       }
+
+      if (Math.sign(valor) === -1) valor = Math.abs(valor);
 
       const respostaDivisores: RespostaDvivisores = {
         numEntradas: valor,

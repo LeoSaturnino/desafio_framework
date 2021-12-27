@@ -1,6 +1,6 @@
 export class CalcularDivisores {
   executar(num: any): number[] {
-    if (num === 0)
+    if (num == 0)
       throw new Error(
         "O zero(0) é divisível por todos os números, menos por ele mesmo"
       );
